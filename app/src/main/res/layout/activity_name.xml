@@ -55,7 +55,7 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <Button
-        android:id="@+id/btnGo"
+        android:id="@+id/btnGoName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -75,5 +75,5 @@
         app:layout_constraintEnd_toEndOf="@+id/editText"
         app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/btnGo" />
+        app:layout_constraintTop_toTopOf="@+id/btnGoName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

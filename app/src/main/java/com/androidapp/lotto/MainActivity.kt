@@ -10,6 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val RandomCard = findViewById<CardView>(R.id.RandomCard)
+
+        RandomCard.setOnClickListener {
+            startActivity(Intent(this@MainActivity, ResultActivity::class.java))
+        }
+
         val constellationCard = findViewById<CardView>(R.id.constellationCard)
 
         constellationCard.setOnClickListener {
