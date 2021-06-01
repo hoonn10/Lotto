@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.cardview.widget.CardView
+import java.text.SimpleDateFormat
 import java.util.*
 
 fun getRandomLottoNumber (): Int{
