@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CalendarView
 import android.widget.DatePicker
 import android.widget.TextView
 import java.text.SimpleDateFormat
@@ -52,9 +53,23 @@ class ConstellationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_constellation)
 
+        val calendar = Calendar.getInstance()
         val btnGoResultConstell = findViewById<Button>(R.id.btnGoResultConstell)
         val datePicker = findViewById<DatePicker>(R.id.datePicker)
         val txtConstell = findViewById<TextView>(R.id.txtConstell)
+        datePicker.init(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH),
+        object : CalendarView.OnDateChangeListener, DatePicker.OnDateChangedListener{
+            override fun onDateChanged(view: DatePicker?, year: Int, monthOfYear: Int, dayOfMonth: Int) {
+                // 변경된 시점의 DatePicker 의 월, 일 정보로 별자리 텍스트 변경
+                txtConstell.text = makeConstellationString(datePicker.month, datePicker.dayOfMonth)
+            }
+            override fun onSelectedDayChange(view: CalendarView, year: Int, month: Int, dayOfMonth: Int) {
+                TODO("Not yet implemented")
+            }
+
+
+
+        })
 
         txtConstell.text= makeConstellationString(datePicker.month, datePicker.dayOfMonth)
 
