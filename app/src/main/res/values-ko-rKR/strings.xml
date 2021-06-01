@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">역전 로또</string>
-
     <string name="constellTxt">별자리 기반 숫자 생성</string>
+
 
 </resources>
