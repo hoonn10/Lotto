@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Reversal Lotto</string>
-    <string name="constellTxt">Constellation Number Generation</string>
+
+    <string name="constellTxt">Constellation-based Number Generation</string>
 </resources>
